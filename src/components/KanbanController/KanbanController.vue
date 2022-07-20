@@ -1,6 +1,4 @@
-<template>
-
-</template>
+<template src="./template.html"/>
 
 <script>
     import KanbanBoard from "@/components/KanbanBoard/KanbanBoard";
@@ -57,6 +55,5 @@
     }
 </script>
 
-<style scoped>
+<style scoped src="./style.less" lang="less"></style>
 
-</style>

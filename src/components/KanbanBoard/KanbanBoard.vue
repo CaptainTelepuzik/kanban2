@@ -1,6 +1,4 @@
-<template>
-    
-</template>
+<template src="./template.html"/>
 
 <script>
     export default {
@@ -8,6 +6,5 @@
     }
 </script>
 
-<style scoped>
+<style scoped src="./style.less" lang="less"></style>
 
-</style>
