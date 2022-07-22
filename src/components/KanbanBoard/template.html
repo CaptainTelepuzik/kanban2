@@ -1,0 +1,19 @@
+<div class="KanbanBoard__wrapper radius-border shadows flex  flex-item-center flex-column"
+     :style="{'background': data.background}">
+    <h2 class="full-width">{{data.title}}
+        <i class = "fa fa-plus cursor-pointer"
+           v-if="!elementIndex" @click="addButtonClick"></i></h2>
+
+    <KanbanCard
+            :key="index"
+            :data="item"
+            :elemenIndex="index"
+            :last="lastBoard"
+            :first="firstBoard"
+            :color="data.cardBackground"
+            v-for="(item,index) in data.tasks"
+
+        />
+
+    <span v-if="!data.tasks.length">Нет задач</span>
+</div>

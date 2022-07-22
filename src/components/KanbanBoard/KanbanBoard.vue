@@ -1,8 +1,17 @@
 <template src="./template.html"/>
 
 <script>
+    import KanbanCard from "@/components/KanbanCard/KanbanCard";
+
     export default {
-        name: "V-KanbanBoard"
+        name: "V-KanbanBoard",
+        props:["elementIndex","data", 'lastBoard','firstBoard'],
+        components: {KanbanCard},
+        methods:{
+            addButtonClick(){
+                this.$emit('addButtonClick');
+            }
+        }
     }
 </script>
 

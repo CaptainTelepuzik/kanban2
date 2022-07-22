@@ -6,33 +6,33 @@
 
     export default {
         name: "V-KanbanController",
-        components:{
-          KanbanBoard, KanbanAddForm
+        components: {
+            KanbanBoard, KanbanAddForm
         },
         data() {
             return {
                 boards: [
                     {
                         title: "В ожидании",
-                        background: '#eee',
+                        background: '#dc7373',
                         cardBackground: '#eee',
                         tasks: []
                     },
                     {
                         title: "В работе",
-                        background: '#eee',
+                        background: '#5674bb',
                         cardBackground: '#eee',
                         tasks: []
                     },
                     {
                         title: "Тестирование",
-                        background: '#eee',
+                        background: '#dbc75d',
                         cardBackground: '#eee',
                         tasks: []
                     },
                     {
                         title: "Выполнено",
-                        background: '#eee',
+                        background: '#81d414',
                         cardBackground: '#eee',
                         tasks: []
                     },
@@ -41,14 +41,15 @@
 
             }
         },
-        methods:{
-            addTask: {
-                addTask(taskData){
-                    this.boards[0].tasks.push(taskData)
-                },
-                closeCard(){
-                    this.addFormVisible=false;
-                }
+        methods: {
+            addTask(taskData) {
+                this.boards[0].tasks.push(taskData)
+            },
+            closeCard() {
+                this.addFormVisible = false;
+            },
+            addButtonClick() {
+                this.addFormVisible = true;
             }
         }
 

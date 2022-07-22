@@ -1,0 +1,8 @@
+<div class="KanbanCard__wrapper" :style="{'background':color}">
+        {{data.title}}
+        <i class = "fa fa-trash" v-if="first"></i>
+        <i class = "fa fa-arrow-left" v-if="!first"></i>
+        <i class = "fa fa-arrow-right" v-if="!last"></i>
+        {{data.deadline}}
+
+</div>

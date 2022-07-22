@@ -1,7 +1,9 @@
 <template src="./template.html"/>
 <script>
     export default {
-        name: "V-KanbanCard"
+        name: "V-KanbanCard",
+        props:['color','data','elementIndex','last','first'],
+
     }
 </script>
 

@@ -1,13 +1,17 @@
-<div class="KanbanController__wrapper full-screen hidden-overflow">
+<div class="KanbanController__wrapper full-screen hidden-overflow flex flex-justify-around">
     <KanbanBoard
-            :key = "item.title"
-            :data = "item"
-            v-for = " item in boards"
+            :key="index"
+            :elementIndex="index"
+            :data="item"
+            :lastBoard="index + 1 === boards.length"
+            :firstBoard = "!index"
+            v-for="(item, index) in boards"
+            @addButtonClick="addButtonClick"
     />
 
     <KanbanAddForm
-            v-f = "addFormVisible"
-            @addTask = "addTask"
-            @close = "closeCard"
+            v-if="addFormVisible"
+            @addTask="addTask"
+            @close="closeCard"
     />
 </div>
