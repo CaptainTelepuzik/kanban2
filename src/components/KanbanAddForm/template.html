@@ -1,7 +1,16 @@
-<div class="KanbanAddForm__wrapper radius-border shadows">
-    <i class = "fa fa-times" @click="closeForm"></i>
-    <input type="text" v-model="task.title">
-    <input type="date" v-model="task.deadline">
-    <button @click="addTask">Сохранить</button>
+<div class="KanbanAddForm__wrapper radius-border shadows full-size flex flex-center">
+    <div class="KanbanAddForm__windows radius-border shadows">
+        <div class="KanbanAddForm__close flex flex-item-center flex-justify-end">
+            <i class = "fa fa-times" @click="closeForm"></i>
+        </div>
+        <div class="KanbanAddForm__form flex flex-column flex-center full-size">
+            <input class="KanbanAddForm__input flex flex-center" type="text" placeholder="Введите Канбан"
+                                                        v-model="task.title">
+            <input class="KanbanAddForm__input flex flex-center " type="date"
+                   v-model="task.deadline">
+            <button class="KanbanAddForm__button flex flex-center"
+                    @click="addTask">Сохранить</button></div>
+
+    </div>
 
 </div>
