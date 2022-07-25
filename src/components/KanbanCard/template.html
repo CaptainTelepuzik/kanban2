@@ -1,8 +1,10 @@
-<div class="KanbanCard__wrapper" :style="{'background':color}">
-        {{data.title}}
-        <i class = "fa fa-trash" v-if="first"></i>
-        <i class = "fa fa-arrow-left" v-if="!first"></i>
-        <i class = "fa fa-arrow-right" v-if="!last"></i>
-        {{data.deadline}}
+<div class="KanbanCard__wrapper radius-border " :style="{'background':color}">
+        <div class="KanbanCard__header full-width">
+                <i class = "fa fa-trash KanbanCard__header-center" v-if="first"></i>
+                <i class = "fa fa-arrow-left KanbanCard__header-left" v-if="!first"></i>
+                <i class = "fa fa-arrow-right KanbanCard__header-right" v-if="!last"></i>
+        </div>
+        <div class="KanbanCard__content ">{{data.title}}</div>
+        <div class="KanbanCard__date">{{data.deadline}}</div>
 
 </div>

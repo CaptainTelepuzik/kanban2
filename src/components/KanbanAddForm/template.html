@@ -4,11 +4,12 @@
             <i class = "fa fa-times" @click="closeForm"></i>
         </div>
         <div class="KanbanAddForm__form flex flex-column flex-center full-size">
-            <input class="KanbanAddForm__input flex flex-center" type="text" placeholder="Введите Канбан"
+            <input class="KanbanAddForm__input flex flex-center" type="text" placeholder="Введите Задачу"
                                                         v-model="task.title">
             <input class="KanbanAddForm__input flex flex-center " type="date"
                    v-model="task.deadline">
             <button class="KanbanAddForm__button flex flex-center"
+                    :disabled="!(task.title && task.deadline)"
                     @click="addTask">Сохранить</button></div>
 
     </div>
