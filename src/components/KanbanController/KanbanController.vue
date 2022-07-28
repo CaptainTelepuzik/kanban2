@@ -64,7 +64,37 @@
                 });
 
                 this.boards[boardId].tasks= newTasks;
-            }
+            },
+          moveNextBoard(taskId, boardId) {
+            const tasks = this.boards[boardId].tasks;
+            const newTasks = [];
+            let itemNew = null;
+
+            tasks.forEach((item) => {
+              if (item.id !== taskId) {
+                newTasks.push(item);
+              } else {
+                itemNew = item;
+              }
+            });
+            this.boards[boardId + 1].tasks.push(itemNew);
+            this.boards[boardId].tasks = newTasks;
+          },
+          movePrevBoard(taskId, boardId) {
+            const tasks = this.boards[boardId].tasks;
+            const newTasks = [];
+            let itemNew = null;
+
+            tasks.forEach((item) => {
+              if (item.id !== taskId) {
+                newTasks.push(item);
+              } else {
+                itemNew = item;
+              }
+            });
+            this.boards[boardId - 1].tasks.push(itemNew);
+            this.boards[boardId].tasks = newTasks;
+          }
         }
 
     }
